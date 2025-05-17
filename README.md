@@ -73,19 +73,3 @@ git branch
 
 git push -u origin main
 
-9. Một số lệnh Git cơ bản khác
-Kiểm tra trạng thái:
-
-git status
-
-Cập nhật code từ GitHub:
-
-git pull
-
-Xem lịch sử commit:
-
-git log
-
-Thêm file cụ thể:
-
-git add đường_dẫn/file
