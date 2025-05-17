@@ -1,117 +1,91 @@
-# Hướng Dẫn Sử Dụng GitHub Cơ Bản
+HƯỚNG DẪN SỬ DỤNG GITHUB CƠ BẢN
+1. Giới thiệu
+GitHub là nền tảng quản lý mã nguồn phổ biến giúp lưu trữ và theo dõi phiên bản dự án phần mềm. Tài liệu này hướng dẫn các thao tác cơ bản để quản lý dự án trên Git và đẩy code lên GitHub.
 
-## Mục Lục
-- [Giới Thiệu](#giới-thiệu)
-- [Chuẩn Bị Môi Trường](#chuẩn-bị-môi-trường)
-- [Khởi Tạo Git Trong Thư Mục Dự Án](#khởi-tạo-git-trong-thư-mục-dự-án)
-- [Cấu Hình Thông Tin Cá Nhân](#cấu-hình-thông-tin-cá-nhân)
-- [Thêm File Và Commit](#thêm-file-và-commit)
-- [Tạo Repository Trên GitHub Và Kết Nối Remote](#tạo-repository-trên-github-và-kết-nối-remote)
-- [Đổi Tên Nhánh Chính (Nếu Cần)](#đổi-tên-nhánh-chính-nếu-cần)
-- [Đẩy Code Lên GitHub](#đẩy-code-lên-github)
-- [Một Số Lệnh Git Cơ Bản Khác](#một-số-lệnh-git-cơ-bản-khác)
-- [Kết Luận](#kết-luận)
+2. Chuẩn bị môi trường
+Cài đặt Git từ trang chính thức: https://git-scm.com/
 
----
+Tạo tài khoản GitHub tại https://github.com/
 
-## Giới Thiệu
+Mở Git Bash (Windows) hoặc Terminal (Mac/Linux)
 
-GitHub là nền tảng quản lý mã nguồn phổ biến, giúp lưu trữ và theo dõi phiên bản dự án phần mềm hiệu quả. Hướng dẫn này giúp bạn làm quen các thao tác cơ bản với Git và GitHub.
+3. Khởi tạo Git trong thư mục dự án
+Mở terminal và di chuyển đến thư mục dự án của bạn bằng lệnh:
 
----
-
-## Chuẩn Bị Môi Trường
-
-- Cài đặt Git từ: [https://git-scm.com/](https://git-scm.com/)
-- Mở Git Bash (Windows) hoặc Terminal (Mac/Linux)
-- Tạo tài khoản GitHub: [https://github.com/](https://github.com/)
-
----
-
-## Khởi Tạo Git Trong Thư Mục Dự Án
-
-Di chuyển đến thư mục dự án:
-
-```bash
 cd đường_dẫn_đến_thư_mục_dự_án
-Khởi tạo kho Git:
 
-bash
-Copy
-Edit
+Khởi tạo kho Git bằng lệnh:
+
 git init
-Cấu Hình Thông Tin Cá Nhân
-Thiết lập tên và email cho Git:
 
-bash
-Copy
-Edit
+4. Cấu hình thông tin cá nhân
+Thiết lập tên và email cho Git (làm một lần):
+
 git config --global user.name "Tên của bạn"
+
 git config --global user.email "email@example.com"
+
 Kiểm tra cấu hình:
 
-bash
-Copy
-Edit
 git config --list
-Thêm File Và Commit
-Thêm toàn bộ file vào vùng chờ commit:
 
-bash
-Copy
-Edit
+5. Thêm file và commit
+Thêm toàn bộ file vào vùng staging:
+
 git add .
-Kiểm tra trạng thái:
 
-bash
-Copy
-Edit
+Kiểm tra trạng thái file:
+
 git status
-Tạo commit:
 
-bash
-Copy
-Edit
+Tạo commit với thông điệp mô tả:
+
 git commit -m "Mô tả nội dung commit"
-Tạo Repository Trên GitHub Và Kết Nối Remote
-Tạo repository mới trên GitHub, lấy URL repo (ví dụ: https://github.com/username/repository.git)
+
+6. Tạo repository trên GitHub và kết nối remote
+Truy cập GitHub, tạo repository mới và lấy URL (ví dụ: https://github.com/username/repository.git)
 
 Thêm remote origin:
 
-bash
-Copy
-Edit
 git remote add origin https://github.com/username/repository.git
+
 Kiểm tra remote:
 
-bash
-Copy
-Edit
 git remote -v
-Nếu remote đã tồn tại, xóa rồi thêm lại:
 
-bash
-Copy
-Edit
+Nếu remote origin đã tồn tại, xóa rồi thêm lại:
+
 git remote remove origin
-git remote add origin https://github.com/username/repository.git
-Đổi Tên Nhánh Chính (Nếu Cần)
-Đổi tên nhánh chính thành main:
 
-bash
-Copy
-Edit
+git remote add origin https://github.com/username/repository.git
+
+7. Đổi tên nhánh chính (nếu cần)
+Đổi nhánh chính về tên main:
+
 git branch -M main
+
 Kiểm tra nhánh hiện tại:
 
-bash
-Copy
-Edit
 git branch
-Đẩy Code Lên GitHub
-Đẩy nhánh chính lên GitHub:
 
-bash
-Copy
-Edit
+8. Đẩy code lên GitHub
+Đẩy nhánh chính lên GitHub và thiết lập tracking:
+
 git push -u origin main
+
+9. Một số lệnh Git cơ bản khác
+Kiểm tra trạng thái:
+
+git status
+
+Cập nhật code từ GitHub:
+
+git pull
+
+Xem lịch sử commit:
+
+git log
+
+Thêm file cụ thể:
+
+git add đường_dẫn/file
